@@ -14,6 +14,9 @@ type ISchema = {
 async function main() {
   program
     .name("directus-pick")
+    .description(
+      "Pick collections from a Directus schema and merge them within a target/original schema"
+    )
     .argument("<original-schema-file>", "Original Directus schema file")
     .argument("<picked-schema-file>", "Directus schema file to be picked")
     .argument(
